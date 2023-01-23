@@ -88,8 +88,7 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: 400;
     font-size: 12px; 
     text-decoration:none;
-        
-      
+  
         
     }
   
@@ -102,14 +101,6 @@ h1,h2,h3,h4,h5,h6 {
   
   }
   
-
-
-
-
-
-
-
-
 
   
   /* --------------------------Style de la barre de navigation ---------------------*/
@@ -150,10 +141,18 @@ h1,h2,h3,h4,h5,h6 {
   }
   
   /* Responsive dans moins de 500px*/
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 1200px) {
+    .navbar-custom {
+
+      /* top: 40%; */
+      display: none;
+
+    }
+
     .navbar-custom a {
       float: none;
       display: block;
+      
     }
   }
 
@@ -166,7 +165,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 /* ----------------------------Barre de recherche -------------------------- */
-.navbar-custom input[type=text] {
+  .navbar-custom input[type=text] {
     position: absolute;
     left: 22% ;
     padding: 5px;
@@ -176,9 +175,9 @@ h1,h2,h3,h4,h5,h6 {
     width: 25%;
     font-size: 15px;
   }
+  /* ------------------------------------Nav Bar responsive  ---------- ---------------------------*/
   
-  
-  @media screen and (max-width: 500px) {
+  /* @media screen and (max-width: 500px) {
     .navbar-custom a, .navbar-custom input[type=text] {
       float: none;
       display: block;
@@ -191,9 +190,20 @@ h1,h2,h3,h4,h5,h6 {
     .navbar-custom input[type=text] {
       border: 1px solid #ccc;
     }
-  }
+  }  */
 
-/* ------------------------------------end of nav barr to followr ---------------------------*/
+
+/* ------------------------------------hamburger       ---------- ---------------------------*/
+
+
+
+
+
+
+
+
+
+/* ------------------------------------end of nav barr ---------- ---------------------------*/
 
 
 
@@ -208,16 +218,16 @@ h1,h2,h3,h4,h5,h6 {
 
 .show h2{
    
-   animation: fadeInRight 1s ease forwards;
+   
    color:var(--dz-green-dark-color);
    font-size: 4vw;
    margin: 0,0,5px;
    opacity: 1;
-   animation: fadeInRight 1s ease forwards;
+   
    
 }
 .show p {
-   animation: fadeInLeft 2s ease forwards;
+
    color:white;
    font-size: 2vw;
    margin: 0;
@@ -226,13 +236,11 @@ h1,h2,h3,h4,h5,h6 {
 
 .show2 h2 {
 
-  animation: fadeInRight 1s ease forwards;
   color:var(--dz-green-dark-color);
   font-size: 4vw;
   margin: 0,0,5px;
   opacity: 1;
-  animation: fadeInRight 1s ease forwards;
-  
+
 }
 
 .show2 p {
@@ -246,15 +254,15 @@ h1,h2,h3,h4,h5,h6 {
 
 
 .show3 h2 {
-
-  animation: fadeInRight 1s ease forwards;
   color:var(--dz-green-dark-color);
   font-size: 4vw;
   margin: 0,0,5px;
   opacity: 1;
-  animation: fadeInRight 1s ease forwards;
+
   
 }
+
+
 .show3 p {
   animation: fadeInLeft 2s ease forwards;
   color:white;
@@ -264,7 +272,127 @@ h1,h2,h3,h4,h5,h6 {
 
 }
 
+
+  @media (max-width: 500px) {
+    .show h2{
+      color:var(--dz-green-dark-color);
+      font-size: 12px;
+      margin: 0,0,5px;
+      opacity: 1;
+      
+  
+  
+    }
+  }  
+
+
 /* ------------------------------------Carosel end -----------------------------------------*/
+
+
+/* ------------------------------------form start -----------------------------------------*/
+
+
+
+@media (max-width: 500px) {
+   .form p {
+    font-size:16px;
+
+
+  }
+}   */
+
+.form {
+  /* font-weight:400;
+  font-size: 28px;  */
+  /* color: var(--dz-dark-grey-color);
+  background-color:var(--fr-light-orange-color);   */
+  border-radius: 20px;
+  
+}
+
+.form p {
+  /* font-weight: 400; */
+  /* font-size: 28px; */
+
+}
+
+.title {
+
+padding: 20px 20px;
+margin-bottom: 20px;
+justify-content: center;
+background-color:var(--fr-dark-orange-color)
+
+}
+
+.title h1 {
+  color: white;
+
+}
+
+.title h3 {
+  align-self: center;
+  color: white;
+}
+
+.titre3 {
+
+  padding: 0px 20px;
+  justify-content: center;
+
+}
+
+.titre5 {
+  padding: 20px 20px;
+  margin: 20px 10px;
+  color: white;
+  background-color:var(--fr-dark-orange-color)
+  
+
+}
+
+
+
+.popup {
+
+  /* position:absolute; */
+  display: none;
+   /* top:100%; */
+  /* bottom: -200%;   */
+  /* left:50%;     */
+  
+}
+
+ .active2 {
+  display: block ;
+  /* position:absolute;        */
+  
+
+}
+
+
+.popup .close-btn {
+
+  /* position: absolute;   */
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height:20px;
+  color: black;
+  background:white;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  
+
+}
+
+
+/*------------------------------- Formulaire end---------------------------------------*/
+
+
+
 
 /*  ------------------------start of ------ start-reclam3 section --------------------*/
 
@@ -299,15 +427,103 @@ width: 90%;
  z-index: +1;
  transition: all 0.5s; 
 
+}
+
+
+/*  ------------------------end of ------ start-reclam3 section --------------------*/
+
+/*  ------------------------start of ------ start of the form 1 pop up2 --------------------*/
+
+
+
+
+.popup2 {
+
+  /* position:absolute; */
+  display: none;
+   /* top:100%; */
+  /* bottom: -200%;   */
+  /* left:50%;     */
+  
+}
+
+ .active3 {
+  display: block ;
+  /* position:absolute;        */
+  
 
 }
-/*  ------------------------end of ------ start-reclam3 section --------------------*/
+
+
+.popup2 .close-btn {
+
+  /* position: absolute;   */
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height:20px;
+  color: black;
+  background:white;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  
+
+}
+
+/*  ---------------------------------- ------ start of the form 2 pop up3 --------------------*/
+
+
+.popup3 {
+
+  /* position:absolute; */
+  display: none;
+   /* top:100%; */
+  /* bottom: -200%;   */
+  /* left:50%;     */
+  
+}
+
+ .active4 {
+  display: block ;
+  /* position:absolute;        */
+  
+
+}
+
+
+.popup3 .close-btn {
+
+  /* position: absolute;   */
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height:20px;
+  color: black;
+  background:white;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  
+
+}
+
+
+
+
+
+
+
+
+/*  ------------------------------------------end the form 2 pop up3 --------------------*/
 
 
 
 /* --------------------------------==start of   client-article section-------------------------------*/
             
-.client-article {
+/* .client-article {
   margin-top:100px;
   margin-bottom:100px;
 
@@ -326,9 +542,38 @@ width: 90%;
    transition: all 0.5s;
 
   
-  }
+  } */
 
-/* ------------------------end article  Colone de service----------------------------*/
+/* ------------------------end article les 3 Colone de service----------------------------*/
+
+/* ------------------------start of the telephone banking section----------------------------*/
+
+
+.visual6 {
+  width: 95%;
+  height: auto;
+}
+
+.visual6:hover {
+width: 80%;
+ height: auto;
+ z-index: +1;
+ transition: all 0.5s;
+
+}
+
+
+.telephone-banking {
+
+  margin-top: 6%;
+  margin-bottom: 4%;
+  margin-left: 0%;
+} 
+
+
+/* ------------------------end of the telephone banking section----------------------------*/
+
+
 
 /* -------------------------- start of th chat bot ------------------------------*/
 
@@ -355,11 +600,11 @@ button {
 
 
 
-form {
+/* form {
   flex: 5;
   display: block;
   padding: 15px;
-}
+} */
 .text-box {
   font-size: 16px;
   display: flex;
@@ -491,221 +736,187 @@ div#dialogue {
 
 
 /*               -----------------  Start of the Footer      -----------            */
- .footer {
+
+
+.footer{
+  position: absolute ;  
+  top: 500%;
   width: 100%;
-  background-color: #18332F;
-  margin: auto;
-  bottom: 0%;
+}
+  /* Le contenu du footer  */
+.contenu__foot{
+  width: 100%;
+  background-color: #000000f5;
 }
 
-
-.footer .ul{
-  list-style: none;
+/* Liste */
+ul{
+    list-style: none;
 }
+
+/* Les colonnes  */
 .footer-col{
-  width: 25%;
-  margin: 10px ;
+    width: 25%;
+    margin: 10px ;
 }
 
+/* Image du Footer */
 .image-footer{
-  width: 25%;
-  padding: 60px ;  
+    width: 25%;
+    padding: 60px ;  
 }
 
+/* Titre de chaque colone */
 .footer-col h4{
-  font-size: 18px;
-  color: blanchedalmond ;
-  margin-bottom: 20px;
-  font-weight: 500;
-  text-decoration: underline #04AA6D ;
+    font-size: 18px;
+    color: blanchedalmond ;
+    margin-bottom: 20px;
+    font-weight: 500;
+    text-decoration: underline #04AA6D ;
 }
 
+/* L'espace entre les petits titres  */
 .footer-col ul li:not(:last-child){
   margin-bottom: 10px ;
 }
 
-.footer-col ul li a {
-  font-size: 20px;
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  display: block;
-  transition: all 0.3s ease;
+/* Liens des petits titres */
+.footer-col ul li a{
+    font-size: 14px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    display: block;
+    transition: all 0.3s ease;
 }
 
-.footer-col ul li a:hover {
-  color: var(--fr-dark-orange-color);
-  padding-left: 20px;
+.footer-col ul li a:hover{
+    color: #fffffff5;
+    padding-left: 20px;
 }
 
+/* Liens des Reseaux Sociaux  */
 .footer-col .social-links a{
-  display: inline-block;
-  height: 50px;
-  width: 50px;
-  background-color: var(--fr-dark-orange-color);
-  margin: 0 10px 10px 0;
-  text-align: center;
-  line-height: 42px;
-  border-radius: 50%;
-  color: black(255, 255, 255);
-  transition: all 0.5s ease;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: #04AA6D;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 42px;
+    border-radius: 50px;
+    color: rgb(255, 255, 255);
+    transition: all 0.5s ease;
 }
 
 .footer-col .social-links a:hover{
-  color: rgb(0, 0, 0);
-  background-color: white;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
 }
 
-@media (max-width: 500px) {
-  .footer-col{
-      width: 50%;
-      margin-bottom: 10px;
-  }
-}
 
-.footer .row{
+
+/* Ligne des "aide, Cookies..." */
+.row__{
   padding: 20px 0 15px;
   display: flex;
   justify-content: space-evenly;    
 }
 
-.footer .row-a{
+.row-a{
   width: 25%;
   padding: 0 2px;
   display: flex;
   justify-content: space-evenly;  
 }
 
-.footer .row-a ul li a{
-  font-size: 20px;
+.row-a ul li a{
+  font-size: 11px;
   color: rgb(255, 255, 255);
   display: block;
 }
 
-.footer .row .row-a a:hover{
+.row .row-a a:hover{
   color: rgb(0, 0, 0);
-  background-color:var(--fr-dark-orange-color);
-}  
+  background-color: #ffffff;
+}
 
-
-/* Footer */
-
-/* Formulaire start */
 
 @media (max-width: 500px) {
-  .form {
-    font-size:12px;
+    .footer__{
+      height: 85vh;
+
+    
+    }
+    .image-footer{
+      
+      padding: none;
+      
+       
+    }
+
+    .image-footer a img {
+      
+      height: 10vh; 
+      width: 80px; 
+      
+       
+    }
 
 
+    .footer-col{
+      width: 40%;
+      margin-bottom: 4px;
+      /* height: 55vh; */
+      margin: 0px;
+  
+      
+    }
+
+    .footer-col h4{
+      
+      font-size: 15px;
+      margin-bottom: 20px;
+      font-weight: 500;
+     
+    }
+
+    .footer-col ul li a{
+      font-size: 12px;
+      
   }
-}
+    
+    .footer-col .social-links a{
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      line-height: 42px;
+    
+      
+  }
 
-.form {
-  font-weight:400;
-  font-size: 28px;
-  color: var(--dz-dark-grey-color);
-  background-color:var(--fr-light-orange-color);
-  border-radius: 20px;
-  
-}
-
-.title {
-
-padding: 20px 20px;
-margin-bottom: 20px;
-justify-content: center;
-background-color:var(--fr-dark-orange-color)
-
-}
-
-.title h1 {
-  color: white;
-
-}
-
-.title h3 {
-  align-self: center;
-  color: white;
-}
-
-.titre3 {
-
-  padding: 0px 20px;
-  justify-content: center;
-
-}
-
-.titre5 {
-  padding: 20px 20px;
-  margin: 20px 10px;
-  background-color:var(--fr-dark-orange-color)
-
-}
-
-.form p {
-  font-weight: 400;
-  font-size: 28px;
-
-}
-
-.popup {
-
-  /* position:absolute; */
-   /* top:-280%; */
-  /* bottom: -200%; */
-  /* left:50%;     */
-  /* opacity: 0;     */
-  /* transform:translate(-50%,-50%) scale(1.25); 
-  width: 50%;     
-  box-shadow: 2px 2px 2px 2px rgba(red, green, blue, alpha); 
-  border-radius: 10px;  
-  transition: top 0ms ease-in-out 200ms, 
-               opacity 200ms ease-in-out 0ms,
-              transform 20ms ease-in-out 0ms; 
-    */
-}
-
-.popup .active {
-  position:absolute;      
-  top:100%;
-  opacity:1;
-  /* transform:translate(-50%,50%) scale(1); 
-  transition: top 0ms ease-in-out 0ms, 
-              opacity 200ms ease-in-out 0ms,
-              transform 20ms ease-in-out 0ms;  
- */
-
-}
-
-
-.popup .close-btn {
-
-  /* position: absolute;  */
-  top: 10px;
-  right: 10px;
-  width: 20px;
-  height:20px;
-  color: black;
-  background:white;
-  text-align: center;
-  line-height: 20px;
-  border-radius: 20px;
-  cursor: pointer;
+  .row__{
+    padding: 20px 0 15px; 
+    display: flex;
+    justify-content: space-evenly;    
+  }
   
 
+
 }
 
 
-/*------------------------------- Formulaire end---------------------------------------*/
+/*              ---- -----------------  end of the Footer      ----------- -------------           */
 
 
 
-/*  ------------------------start of the reclamation------------- --------------------*/
 
-.cover {
+/*  ------------------------start of the reclamation style page------------- --------------------*/
+
+/* .cover {
 
 bottom: 200px;
 
-}
+} */
 
 .cover-background img {
 
@@ -714,9 +925,16 @@ bottom: 200px;
   right: 00;
   top: 0px;
   width: auto;
-  min-width: 100%; 
+  min-width: 100%;
+
+
+  /* background-size: cover; 
+  max-width: auto; */
 
 }
+
+
+
 
 /*  ------------------------start of ------ start-reclam section --------------------*/
 
@@ -730,6 +948,15 @@ bottom: 200px;
   margin-bottom: 20px;
   margin-left: 0%;
 } 
+
+
+@media (max-width: 500px) {
+  .start-reclam {
+    margin-top: 110%;
+    
+  }
+}
+  
 
 
 .title-reclam {
@@ -762,7 +989,7 @@ width: 90%;
 
 
 .gates-title h1{
-  margin-top: 6%; 
+  margin-top: 4%; 
 
 }
 
@@ -847,8 +1074,12 @@ width: 90%;
     text-align: center;
     transition: 0.2s ease;
     cursor: pointer;
-
       
+    }
+
+    #desepear {
+
+      display: none;
     }
   }
 
@@ -1040,5 +1271,58 @@ box-shadow: 5px 5px 15px #006943;
 }
 
 
-
 /*  ------------------------end of service section  --------------------------------------*/
+
+/*  ------------------------end of  the reclamation style page------------- --------------------*/
+
+
+
+
+/*  ------------------------start of  the mobile banking  style page------------- --------------------*/
+
+
+.mobile-banking {
+
+  margin-top: 35%;
+  /* margin-bottom: 20px; */
+  margin-left: 0%;
+} 
+
+
+.title-mobile-app {
+
+  margin-bottom: 35px;
+}
+
+.title-mobile-app2 {
+
+  margin-bottom: 15px;
+
+}
+
+@media (max-width: 500px) {
+  .mobile-banking {
+    margin-top: 80%;
+
+
+  }
+}
+
+/*  ------------------------start of  the  Mobile-video section------------ --------------------*/
+
+
+
+.Mobile-video{
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+}
+
+.title-mobile-paragraph {
+  margin-bottom: 4%;
+
+}
+
+
+/*  ------------------------end of  the mobile banking  style page------------- --------------------*/
+

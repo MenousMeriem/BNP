@@ -1,0 +1,977 @@
+@charset "UTF-8";
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: "Italiana", serif;
+  font-family: "Noto Serif", serif;
+}
+
+/*------------------------------------------- DEBUT Navbar 1 -----------------------------------*/
+.NAV_DEUX {
+  background-color: #04AA6D;
+  width: 100%;
+  height: 80px;
+}
+.NAV_DEUX .ul {
+  /* float: right; */
+  margin-right: 20px;
+}
+.NAV_DEUX .li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+  color: #FFFFFF;
+  font-size: 30px;
+}
+.NAV_DEUX .li.a {
+  color: #ffffff;
+  font-size: 17px;
+  padding: 10px 30px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+.NAV_DEUX .li.a.ACTIVE_ {
+  background-color: #006943;
+  transition: 0.5s;
+}
+.NAV_DEUX:hover {
+  background-color: #ccc;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 480px) {
+  .NAV_DEUX {
+    background-color: #04AA6D;
+    width: 100%;
+    height: 60px;
+  }
+  .ul li {
+    display: inline-block;
+    line-height: 65px;
+    margin: 0 2px;
+    color: #FFFFFF;
+    font-size: 10px;
+  }
+  .a {
+    font-size: 10px;
+    padding: 8px 15px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+}
+/*------------------------------------------- DEBUT HUMBERGER -----------------------------------*/
+.hamburger {
+  display: none;
+}
+.hamburger .hamburger__container {
+  display: block;
+  position: fixed;
+  z-index: 999;
+  top: 4em;
+  left: 0.5em;
+  cursor: pointer;
+  width: 4rem;
+  height: 2rem;
+  transition: opacity 150ms ease-in;
+}
+.hamburger .hamburger__container:hover {
+  opacity: 0.9;
+}
+.hamburger .hamburger__container .hamone,
+.hamburger .hamburger__container .hamtwo,
+.hamburger .hamburger__container .hamthree {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 12%;
+  background: #000000;
+  border-radius: 100vw;
+}
+.hamburger .hamburger__container .hamone {
+  transition: all 200ms ease-in;
+  top: 0;
+}
+.hamburger .hamburger__container .hamtwo {
+  transition: all 300ms ease-in;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 75%;
+}
+.hamburger .hamburger__container .hamthree {
+  width: 30%;
+  transform-origin: right;
+  bottom: 0;
+}
+.hamburger .hamburger__container.active .hamone,
+.hamburger .hamburger__container.active .hamtwo,
+.hamburger .hamburger__container.active .hamthree {
+  background: rgb(255, 255, 255);
+}
+.hamburger .hamburger__container.active .hamtwo {
+  width: 100%;
+}
+.hamburger .hamburger__container.active .hamone {
+  width: 30%;
+  transform-origin: right;
+  transform: translateX(-25%) rotate(-48deg);
+}
+.hamburger .hamburger__container.active .hamthree {
+  width: 30%;
+  transform-origin: right;
+  transform: translateX(-25%) rotate(48deg);
+}
+.hamburger .hamburger__content {
+  transform: translateX(-110%);
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40vh;
+  background-color: rgba(4, 170, 109, 0.7882352941);
+  transition: tranform 500ms ease-in;
+}
+.hamburger .hamburger__content ul {
+  padding-block: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.hamburger .hamburger__content li a {
+  color: #ffffff;
+  font-size: 15px;
+}
+.hamburger .hamburger__content li a.active_ {
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid white;
+}
+.hamburger .hamburger__content.active {
+  transform: translateX(0);
+}
+
+@media screen and (max-width: 1280px) and (min-width: 1000px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger .hamburger__container {
+    display: block;
+    position: fixed;
+    z-index: 999;
+    top: 8em;
+  }
+}
+@media screen and (max-width: 1000px) and (min-width: 500px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger .hamburger__container {
+    display: block;
+    position: fixed;
+    z-index: 999;
+    top: 6em;
+  }
+}
+@media screen and (max-width: 500px) and (min-width: 375px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger .hamburger__container {
+    display: block;
+    position: fixed;
+    z-index: 999;
+    top: 4em;
+  }
+}
+/*------------------------------------------- FIN HUMBERGER -----------------------------------*/
+/* Style de la barre de navigation */
+.navbar__ {
+  width: 85%;
+  background-color: rgb(255, 255, 255);
+  overflow: auto;
+  border-radius: 15px;
+  padding: 7px;
+  position: fixed;
+  left: 6%;
+  top: 15%;
+  box-shadow: 0px 0px 15px #006943;
+  z-index: 9999;
+}
+
+/* Les liens de la Navbar */
+.navbar__ a {
+  float: right;
+  text-align: center;
+  padding: 12px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* Hover des liens */
+.navbar__ a:hover {
+  background-color: rgba(0, 0, 0, 0.219);
+  border-radius: 10px;
+}
+
+/* Le lien sélectionner sur la navbar */
+.active_ {
+  background-color: #04AA6D;
+  border-radius: 10px;
+}
+
+/* Barre de recherche  */
+.navbar__ input[type=text] {
+  position: absolute;
+  left: 22%;
+  padding: 5px;
+  top: 25%;
+  border-radius: 5px;
+  border: 2px solid #04AA6D;
+  width: 25%;
+  font-size: 15px;
+}
+
+/* Responsive dans moins de 1280px*/
+@media screen and (max-width: 1280px) {
+  .navbar__ {
+    display: none;
+  }
+}
+/************************************ Slider  ***************************** */
+.active {
+  background-color: #006943;
+  margin-top: 10%;
+}
+
+.active button {
+  background-color: #006943;
+  border: none;
+  color: #FFFFFF;
+  margin-left: 45%;
+}
+
+/************************** Début --  les services ****************** */
+.Texte h1 {
+  font-size: 50px;
+  color: #006943;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.Texte p {
+  font-size: 35px;
+  text-align: center;
+  color: #006943;
+  margin-top: 5%;
+}
+
+.Cartes {
+  position: static;
+  width: 100%;
+  height: 70%;
+  /* background: linear-gradient(#f69c3c80, #04AA6D); */
+}
+
+.Carte_M {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-height: 70%;
+  max-width: 100%;
+  left: 7%;
+}
+
+.Carte {
+  display: grid;
+  grid-template-columns: 160px;
+  grid-template-rows: 65px 60px 70px;
+  border-radius: 18px;
+  /* font-size: 16px; */
+  background-color: #FFFFFF;
+  box-shadow: 5px 0px 15px #006943;
+  text-align: center;
+  transition: 0.2s ease;
+  cursor: pointer;
+  margin-top: 5%;
+}
+
+.Carte:hover {
+  transform: scale(1.5);
+  box-shadow: 5px 5px 15px #006943;
+}
+
+.Carte-image {
+  background-size: cover;
+  padding: 12px;
+}
+
+.Carte-txt {
+  margin: 8px;
+}
+
+.Carte-txt p {
+  margin-top: 5px;
+  color: #006943;
+  font-size: 15px;
+}
+
+.Carte-txt h2 {
+  font-size: 18px;
+  color: #000000;
+}
+
+@media screen and (max-width: 1200px) {
+  .Texte h1 {
+    font-size: 20px;
+    text-align: center;
+    color: #006943;
+  }
+  .Texte p {
+    font-size: 17px;
+    text-align: center;
+    color: #006943;
+  }
+  .Cartes {
+    width: 100%;
+    /* background: linear-gradient(#f69d3c, #04AA6D); */
+  }
+  .Carte_M {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .Carte {
+    display: grid;
+    grid-template-columns: 140px;
+    grid-template-rows: 65px 60px 50px;
+    border-radius: 18px;
+    font-size: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 5px 0px 15px #006943;
+    text-align: center;
+    transition: 0.2s ease;
+    cursor: pointer;
+    margin-top: 10%;
+  }
+  .Carte:hover {
+    transform: scale(1.5);
+    box-shadow: 5px 5px 15px #006943;
+  }
+  .Carte-image {
+    background-size: cover;
+    padding: 12px;
+  }
+  .Carte-txt {
+    margin: 8px;
+  }
+  .Carte-txt p {
+    margin-top: 5px;
+    color: #006943;
+    font-size: 10px;
+  }
+  .Carte-txt h2 {
+    font-size: 13px;
+    color: #000000;
+  }
+}
+/********************* Fin --  les services ****************** */
+/* ----------------------------- Debut Pourquoi devenir client -----------------  */
+.Contenu_T {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.contenu_client {
+  background: url(../IMAGES/f.jpg) no-repeat left;
+  background-size: 50%;
+  height: 100vh;
+  overflow: hidden;
+  margin-left: 2%;
+  position: relative;
+  margin-top: 5%;
+}
+
+.client {
+  width: 55%;
+  height: 50%;
+  float: right;
+  /* background: linear-gradient(#f69d3c, #04AA6D); */
+  padding: 5%;
+  border-radius: 20px;
+}
+
+.client h1 {
+  color: #006943;
+  font-size: 38px;
+  margin: 5%;
+  /* font-family: 'Roboto', sans-serif; */
+}
+
+.Texte_P p {
+  /* font-family: 'Roboto', sans-serif; */
+  font-size: 20px;
+  color: #006943;
+  line-height: 15px;
+  margin: 35px;
+  padding: 5px;
+}
+
+.client_button {
+  width: 30%;
+  height: 20%;
+  background-color: #006943;
+  margin-left: 65%;
+  border: none;
+  color: #ffffff;
+}
+
+.image___ {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .contenu_client {
+    width: 100%;
+  }
+  .contenu_client .client {
+    height: 100%;
+    width: 100%;
+  }
+  .contenu_client .image___ {
+    width: 100%;
+    height: 20vh;
+  }
+  .contenu_client .image___ img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .contenu_client .contenu_client {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    margin-left: 2%;
+    margin-top: 5%;
+  }
+  .contenu_client .client h1 {
+    color: #006943;
+    font-size: 13px;
+  }
+  .contenu_client .Texte_P p {
+    font-size: 12px;
+    text-align: justify;
+    line-height: 6px;
+    color: #006943;
+    background-size: 100%;
+  }
+}
+/* ----------------------------- Fin Pourquoi devenir client -----------------  */
+/*************************** La carte  ********************/
+.TitreTrouver {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* background-color: #006943; */
+  /* background: linear-gradient(#f69c3c00, #04AA6D); */
+}
+
+.TitreTrouver h1 {
+  /* font-family: 'Roboto', sans-serif; */
+  color: #006943;
+  text-align: center;
+  font-size: 60px;
+}
+
+.TitreTrouver p {
+  /* font-family: 'Roboto', sans-serif; */
+  color: #006943;
+  text-align: center;
+  font-size: 20px;
+}
+
+.Lacarte {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+}
+
+.Mapgénéral {
+  overflow: hidden;
+}
+
+.Map {
+  width: 50%;
+  height: 50%;
+  float: right;
+}
+
+.Info_map {
+  margin-left: 3%;
+  padding: 0%;
+}
+
+.Info_map_a {
+  width: 50%;
+  float: left;
+  background: linear-gradient(#04AA6D, #f69d3c);
+  padding: 5%;
+  margin-top: 2%;
+}
+
+.form {
+  width: 100%;
+  height: 100%;
+  position: static;
+}
+
+.text-center {
+  /* background-color: #ccc; */
+  color: #006943;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 880px) {
+  .Info_map_a {
+    width: 100%;
+    background: linear-gradient(#04AA6D, #f69d3c);
+  }
+  .Lacarte {
+    position: relative;
+    height: 60%;
+    width: 100%;
+  }
+  .Mapgénéral {
+    overflow: hidden;
+  }
+  .Map {
+    width: 100%;
+    height: 50%;
+  }
+  .text-center {
+    font-size: 10px;
+  }
+  .TitreTrouver h1 {
+    text-align: center;
+    font-size: 20px;
+  }
+  .TitreTrouver p {
+    text-align: center;
+    font-size: 14px;
+    color: #006943;
+  }
+}
+/*************************** Fin -- La carte  ********************/
+/******************* Début -- notre sélection  ******************/
+.Général {
+  background-color: white;
+  position: relative;
+  /* top: 380%; */
+  width: 100%;
+}
+
+.Text__G {
+  position: relative;
+}
+
+.Container_ {
+  position: relative;
+}
+
+.Text__G h1 {
+  font-size: 60px;
+  color: #006943;
+  padding-top: 10%;
+  text-align: center;
+  /* font-family: 'Roboto', sans-serif; */
+}
+
+@media screen and (max-width: 480px) {
+  .Text__G h1 {
+    font-size: 20px;
+  }
+}
+.Container_ {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: white;
+  padding-top: 3%;
+}
+
+@media screen and (max-width: 480px) {
+  .Container_ {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.cards {
+  width: 100%;
+  margin: 10px;
+  background-color: #04AA6D;
+  /* border : 2px solid #00694381;  */
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 480px) {
+  .cards {
+    width: 270px;
+    height: 300px;
+  }
+}
+.card-img img {
+  border-radius: 8px;
+  border-radius: 20px;
+  height: 50%;
+  display: block;
+  width: 100%;
+}
+
+.card-body h2 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 120%;
+  /* letter-spacing: 2px; */
+  /* font-family: 'Roboto', sans-serif; */
+}
+
+.card-body p {
+  /* letter-spacing: 2px; */
+  line-height: 2;
+  color: #ffffff;
+  text-align: center;
+  font-size: 15px;
+  /* height: 60%; */
+  /* margin-top: 2px; */
+  /* font-family: 'Roboto', sans-serif; */
+}
+
+@media screen and (max-width: 480px) {
+  .card-body h2, .card-body p {
+    font-size: 12px;
+  }
+}
+/******************* Fin -- notre selection  ******************/
+/****************************** DEBUT de Temoignage  *******************************/
+.Temoi {
+  width: 100%;
+  height: 60%;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #006943;
+  margin-top: 5%;
+}
+
+.Temoi_Contenu {
+  position: relative;
+  width: 70%;
+  margin-right: 2%;
+  overflow: hidden;
+}
+
+.Temoi_Wrapper {
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 1s;
+}
+
+.Temoi_Carte {
+  padding: 20px;
+  margin: 0 1px;
+  display: flex;
+  background: #b91717 255, 255, 255;
+  margin-left: 5%;
+  box-shadow: 0 10px;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.Temoi_thumb {
+  width: 70%;
+  height: 250px;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: relative;
+  background-color: #04AA6D;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.Temoi_Client {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 5px 20px;
+  text-transform: capitalize;
+  font-size: 17px;
+  color: #006943;
+}
+
+.Temoi_body {
+  width: 120%;
+  min-height: 100%;
+  height: auto;
+  margin-left: 20px;
+  position: relative;
+  padding-bottom: 50px;
+  background-color: #FFFFFF 185, 11, 11;
+}
+
+.Paragraphe {
+  font-size: 17px;
+  line-height: 50px;
+  margin-top: 30px;
+  color: #000000;
+}
+
+.indications {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.indications button {
+  background: none;
+  border: none;
+  outline: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 3px solid #ee8311;
+  margin-right: 5px;
+  transition: 0.5s;
+}
+
+.indi_active button {
+  width: 40px;
+  border-radius: 50px;
+  background: rgb(255, 255, 255);
+}
+
+@media (max-width: 880px) {
+  .Temoi {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .Temoi_Contenu {
+    width: 100%;
+    margin: auto;
+  }
+  .Temoi_Carte {
+    flex-direction: column;
+  }
+  .Temoi_thumb {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .Temoi_body {
+    width: 100%;
+    min-height: auto;
+    /* margin-left: 0; */
+  }
+  .Paragraphe {
+    font-size: 17px;
+  }
+}
+/****************************** FIN de Temoignage  *******************************/
+/******************* Debut -- Contactez nous   ******************/
+.contact_us {
+  position: relative;
+  width: 100%;
+}
+
+.contact_us_ {
+  display: inline-block;
+  /* opacity: 0.9; */
+  /* position: relative;  */
+  width: 100%;
+}
+
+.texte__us {
+  background: linear-gradient(#04AA6D, #f69d3c);
+  z-index: 1;
+  /* position: absolute; */
+  /* margin: 3%; */
+  text-align: center;
+  font-family: Georgia;
+  /* left: 0;
+  right: 0; */
+  color: white;
+  width: 100%;
+}
+
+.texte__us h1 {
+  margin-top: 5%;
+}
+
+@media (max-width: 500px) {
+  .texte__us h1, p, h2 {
+    font-size: 20px;
+  }
+}
+ul {
+  list-style: none;
+}
+
+/* Les colonnes  */
+.Contactez__nous__col {
+  width: 25%;
+  margin: 10px;
+}
+
+/* Titre de chaque colone */
+.Contactez__nous__col h4 {
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.Contactez__nous__ {
+  padding: 20px 0 15px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/******************* Fin -- Contactez nous     ******************/
+/******** Footer ****************/
+.footer__ {
+  position: static;
+  width: 100%;
+}
+
+/* Le contenu du footer  */
+.contenu__foot {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9607843137);
+}
+
+/* Liste */
+ul {
+  list-style: none;
+}
+
+/* Les colonnes  */
+.footer__col {
+  width: 25%;
+  margin: 10px;
+}
+
+/* Image du Footer */
+.image__footer {
+  width: 25%;
+  padding: 60px;
+}
+
+/* Titre de chaque colone */
+.footer__col h4 {
+  font-size: 18px;
+  color: blanchedalmond;
+  margin-bottom: 20px;
+  font-weight: 500;
+  /* text-decoration: underline #04AA6D ; */
+}
+
+/* L'espace entre les petits titres  */
+.footer__col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+/* Liens des petits titres */
+.footer__col ul li a {
+  font-size: 14px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer__col ul li a:hover {
+  color: rgba(255, 255, 255, 0.9607843137);
+  padding-left: 20px;
+}
+
+/* Liens des Reseaux Sociaux  */
+.footer__col .social__links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: #04AA6D;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 42px;
+  border-radius: 50px;
+  color: rgb(255, 255, 255);
+  transition: all 0.5s ease;
+}
+
+.footer__col .social__links a:hover {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+}
+
+@media (max-width: 480px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 10px;
+  }
+  .footer__col h4 {
+    font-size: 15px;
+  }
+  .footer__col ul li a {
+    font-size: 12px;
+  }
+  .image__footer {
+    /* display: none; */
+  }
+}
+/* Ligne des "aide, Cookies..." */
+.row__ {
+  padding: 20px 0 15px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.row__a {
+  width: 25%;
+  padding: 0 2px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.row__a ul li a {
+  font-size: 11px;
+  color: rgb(255, 255, 255);
+  display: block;
+}
+
+.row .row__a a:hover {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+}
+
+/* Footer *//*# sourceMappingURL=Page_1.css.map */

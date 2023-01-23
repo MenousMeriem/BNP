@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'accueil</title>
+    <link rel="icon" type="../IMAGES/png" href="">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
+     crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+     <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">   
+    <link href="assets/css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../CSS/Page_2.css">
+    <link rel="stylesheet" href="../Sass/Page_2.css">
+    <!-- Page JS -->
+    <script src="../JS/JavaScript.js" defer></script>
+
+    
+
+</head>
+
+<body>
+    
+    <header>
+
+        <!-- Premiere navbar   -->
+
+        <nav class="NAV_DEUX">
+            <ul>
+                <li><a href="../HTML/Page_1.html">Particuliers</a>  </li>
+                <li><a class="ACTIVE_" href="../HTML/Page_2.html">Professionnels </a> </li>
+                <li><a href="">Entreprises </a> </li>
+            </ul>
+
+        </nav>
+
+<!----------------- Humberger  ------------------>
+
+    <div class="hamburger">
+        <div class="hamburger__container">
+            <div class="hamone"></div>
+            <div class="hamtwo"></div>
+            <div class="hamthree"></div>
+        </div>
+        <div class="hamburger__content">
+            <ul>
+                <input type="text" class="search__bar" placeholder=" Recherche..">
+                <li><a class="active_" href="../HTML/Page_1.html"><i class="fa fa-fw fa-home"></i> Accueil</a></li>
+                <li><a href="#"><i class="fa fa-bank"></i> Agence</a></li>
+                <li><a href="../HTML/reclamation.html"><i class="fa-solid fa-helmet-safety"></i> Réclamation</a></li>
+                <li><a href="../HTML/login.html"><i class="fa fa-vcard"></i> Mon compte </a></li>
+                <li><a href="../HTML/devenir-client.html"><i class="fa-solid fa-user-plus"></i> Devenir client</a> </li>
+            </ul>
+          </div>
+        </div>
+    </div>
+
+<!----------------- Humberger  ------------------>
+
+        <!-- Deuxieme navbar   -->
+
+        <nav class="NAV_PRE">
+          <!-- <button class="my-button" id="button">
+            <i class="fas fa-bars"></i>
+          </button> -->
+            <div class="navbar__" id="navbar">
+                <a href="../HTML/devenir-client.html"><i class="fa-solid fa-user-plus"></i> Devenir client</a> 
+                <a href="../HTML/login.html"><i class="fa fa-vcard"></i> Mon compte </a>
+                <a href="../HTML/reclamation.html"><i class="fa-solid fa-helmet-safety"></i> Réclamation</a>
+                <a href="#"><i class="fa fa-bank"></i> Agence</a>
+                <a class="active_" href="../HTML/Page_1.html"><i class="fa fa-fw fa-home"></i> Accueil</a>
+                <input type="text" class="search__bar" placeholder=" Recherche..">
+                <div class="logo_con">
+                    <img src="../IMAGES/BNP.png" alt="Logo">  </a> 
+                </div>
+            </div>
+        </nav>
+    </header> 
+
+
+    <!------------------------------------- DEBUT SLIDER  --------------------------------->
+    
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="../IMAGES/BNP_PLS.jpg" alt="First slide">
+            <!-- <button > Rejoignez-nous </button> -->
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="../IMAGES/Myb.jpg" alt="Second slide">
+            <!-- <button> Rejoignez-nous </button> -->
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="../IMAGES/carte-aff0.jpg" alt="Third slide">
+            <!-- <button> Rejoignez-nous </button> -->
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+           <span class="sr-only">Previous</span> 
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span> 
+        </a>
+      </div>
+    <!------------------------------------- FIN Slider --------------------------------->
+
+     <!---------------------------------- DEBUT Les Services-------------------------------> 
+   
+     <div class="Cartes"> 
+        <div class="Texte"> 
+            <h1>    Nos services </h1>
+            <p> BNP Paribas vous propose plusieurs services </p>
+        </div> 
+        <div class="Carte_M">
+            <div class="Carte">
+                <div class="Carte-image"><img src="../IMAGES/00.jpg" width="70px" height="60px"></div>
+                <div class="Carte-txt">
+                    <h2> Ouvrir un compte PRO </h2>
+                    <p> Souscrivez à un compte spécial PRO </p> 
+                </div>
+            </div>
+
+            <div class="Carte">
+                <div class="Carte-image"><img src="../IMAGES/02.jpg" width="70px" height="60px"></div>
+                <div class="Carte-txt">
+                    <h2> Gérer vos comptes à distance  </h2>
+                    <p> Consultez et réalisez vos opérations bancaires à distance </p> 
+                </div>
+            </div> 
+
+            <div class="Carte">
+                <div class="Carte-image"><img src="../IMAGES/111.jpg" width="70px" height="60px"></div>
+                <div class="Carte-txt">
+                    <h2> Financez votre matériel </h2>
+                    <p> Concrétisez vos projets professionnels </p> 
+                </div>
+            </div>  
+
+            <div class="Carte">
+                <div class="Carte-image"><img src="../IMAGES/221.jpg" width="70px" height="60px"></div>
+                <div class="Carte-txt">
+                    <h2> Gérer vos flux </h2>
+                    <p> Optimisez la gestion de vos flux grace à des solutions adaptées </p> 
+                </div>
+            </div>  
+
+            <div class="Carte">
+                <div class="Carte-image"><img src="../IMAGES/241.jpg" width="70px" height="60px"></div>
+                <div class="Carte-txt">
+                    <h2> Protéger vos activités  </h2>
+                    <p> Assurez votre activité, vos employés ou vous-memes </p> 
+                </div> 
+            </div>
+
+            <div class="Carte">
+                <div class="Carte-image"><img src="../IMAGES/05.jpg" width="70px" height="60px"></div>
+                <div class="Carte-txt">
+                    <h2> Professions libérales de santé </h2>
+                    <p> Bénéficier de services dédiés </p> 
+                </div>
+            </div>    
+
+            <div class="Carte">
+                <div class="Carte-image"><img src="../IMAGES/06.jpg" width="70px" height="60px"></div>
+                <div class="Carte-txt">
+                    <h2>  Vos formulaires </h2>
+                    <p>  Gangnez du temps en agence  </p> 
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+ <!---------------------------------- FIN Les Services-------------------------------> 
+
+<!----------------------------- Debut Pourquoi devenir client ----------------- -->
+
+     <div class="Contenu_T">
+        <div class="contenu_client">
+            <div class="client">
+                <h1> LES 4 BONNES RAISONS DE CHOISIR BNP PARIBAS EL DJAZAIR :</h1>
+                <div class="Texte_P">
+                    <p> Un service passionné  </p>
+                    <p> Des produits innovants  </p>
+                    <p> Une banque proche de vous  </p>
+                    <p> Vos projets soutenus  </p>
+                </div>
+                <!-- <div class="autres">
+                    <span> ggggg </span>
+                    <span> ggggg </span>
+                    <span> ggggg </span>
+                </div> -->
+                <input type="button" class="client_button" value="Ouvrir un compte">
+            </div>
+        </div>
+    </div>
+<!----------------------------- Fin Pourquoi devenir client ---------------------------- -->
+
+<!-- -------------------------- Début  La carte ----------------------------->
+   
+<div class="TitreTrouver">
+    <h1> Trouver votre agence </h1>
+    <p> Trouvez l'agence BNP Paribas El Djazair près de chez vous et découvrez toutes les agences en Algérie avec leurs coordonnées et leurs horaires d'ouverture.</p>
+</div>
+<div class="Lacarte">
+    <div class="Mapgénéral">
+        <div class="Map">
+            <div class="Info_map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11377286.663815472!2d-5.52966472823632!3d29.10039352251839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7e8a6a28037bd1%3A0x7140bee3abd7f8a2!2zQWxnw6lyaWU!5e0!3m2!1sfr!2sdz!4v1673605960792!5m2!1sfr!2sdz" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="Info_map_a">
+            <div class="form">
+                <form ><!--action="forms/contact.php" method="post" role="form" class="php-email-form" -->
+                    <div class="row">
+                        <div class="form-group col-lg-6">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Civilité*" required>
+                        </div>  
+                        <div class="form-group col-lg-6 mt-3 mt-lg-0">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Nom*" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-6">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Prénom*" required>
+                        </div>
+                        <div class="form-group col-lg-6 mt-3 mt-lg-0">
+                           <input type="email" class="form-control" name="email" id="email" placeholder="Date de naissance*" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-6">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Email*" required>
+                        </div>
+                        <div class="form-group col-lg-6 mt-3 mt-lg-0">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Téléphone*" required>
+                        </div>
+                    </div>
+                  <!-- <div class="form-group mt-3">
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                  </div>
+                  <div class="form-group mt-3">
+                    <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                  </div> -->
+                    <div class="my-3">
+                        <div class="loading" style="color: aliceblue;">* Champs obligatoire</div>
+                    <!-- <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div> -->
+                    </div>
+                    <div class="text-center"><button type="submit" title="Send Message"> Suivant </button></div>
+                </form>
+            </div>                
+        </div>
+    </div>
+</div>
+
+<!-- --------------------------  Fin de La carte ----------------------------->
+<!-- ------------------------------  DEBUT de temoignage   --------------------------- -->
+
+<div class="Temoi">
+    <div class="Temoi_Contenu">
+        <div class="Temoi_Wrapper">
+            <div class="Temoi_Carte">
+                <div class="Temoi_thumb">
+                    <img src="../IMAGES/mment.jpg" alt="">
+                    <span class="Temoi_Client" style="background-color: beige; ">
+                        Meriem
+                    </span>
+                </div>
+                <div class="Temoi_body">
+                    <p class="Paragraphe">La qualité de service, d’écoute et de 
+                        prise en charge est irréprochable. Avec un emploi du 
+                        temps ne me permettant pas de me déplacer en agence, 
+                        le Direct Call ou ma conseillère me répondent par email 
+                        à la moindre question.</p>
+                </div>
+            </div>
+            <div class="Temoi_Carte">
+                <div class="Temoi_thumb">
+                    <img src="../IMAGES/n_08.jpg" alt="">
+                    <span class="Temoi_Client" style="background-color: beige; border-radius: 10px;">
+                        Mehdi
+                    </span>
+                </div>
+                <div class="Temoi_body">
+                    <p class="Paragraphe">Pour ma demande de crédit immobilier, 
+                        ma conseillère m’appelait constamment pour me situer 
+                        sur l’avancement de mon dossier. 
+                        C’est bien de se sentir accompagné.</p>
+                </div>
+            </div> <!--  -->
+
+
+        </div>
+
+        <div class="indications">
+            <button class="indi_active"> </button>
+            <button></button>
+            <button></button>
+        </div>
+    </div>
+
+    <!-- <script type="">
+        const Temoi_Wrapper = document.querySelector('.Temoi_Wrapper');
+        const indications = [...document.querySelectorAll('indications button')]
+        
+        let currentTestimontial = 0; //
+
+        indications.forEach(item, i) => ({
+            item.addEventListener('click' , () => {
+                indications[currentTestimontial].classList.remove('active');
+                Temoi_Wrapper.style.marginLeft = ' -$(100 * i)%' ; 
+                item.classList.add('indi_active') ;
+                currentTestimontial = 1 ;
+            })
+            
+        })
+    </script> -->
+</div>
+
+
+<!-- ------------------------------  FIN de temoignage  --------------------------- -->
+
+<!-- ------------------- Notre Sélection ----------------  -->
+
+<section class="Général"> 
+   <div class="Text__G">
+        <h1>Notre sélection</h1>
+        <p></p>
+    </div>
+    <div class="Container_">
+        <div class="cards">
+            <div class="card-img">
+                <a type="image/jpg"> <img src="../IMAGES/020.jpg" alt="Logo">  </a>
+            </div>
+            <div class="card-body">
+                <h2> ALGERIENS RESIDENT A L'ETRANGER </h2>
+                <p> Découvrez toutes nos solutions qui vous sont dédiées <br> </p>
+            </div>
+            <!-- <div class="card-footer"></div> -->
+        </div>
+
+        <div class="cards">
+            <div class="card-img">
+                <a type="image/jpg"> <img src="../IMAGES/010.jpg" alt="Logo">  </a>
+            </div>
+            <div class="card-body">
+                <h2> CREDIT IMMO FORMULE </h2>
+                <p> Fini le statut de locataire,<br>Passez à celui de popriétaire <br></p> 
+            </div>
+            <!-- <div class="card-footer"></div> -->
+        </div>
+
+        <div class="cards">
+            <div class="card-img">
+                <a type="image/jpg"> <img src="../IMAGES/040.jpg" alt="Logo">  </a>
+            </div>
+            <div class="card-body">
+                <h2> JEUNES </h2>
+                <p> Les solutions BNP Paribas El Djazair<br> pour bien démarrer dans la vie<br></p>
+            </div>
+            <!-- <div class="card-footer"></div> -->
+        </div>
+        
+        <div class="cards">
+            <div class="card-img">
+            <a type="image/jpg"> <img src="../IMAGES/030.jpg" alt="Logo">  </a>
+            </div>
+            <div class="card-body">
+                <h2> PACKAGES TOUT EN UN  </h2>
+                <p> Le forfait "tout compris" <br>pour l'essentiel des services bancaires</p>
+            </div>
+            <!-- <div class="card-footer"></div> -->
+        </div>
+
+    </div>
+</section>
+
+<!-- ------------------------------ Fin de sélection --------------------------- -->
+
+<!-- ------------------------------ Debut de Contact us --------------------------- -->
+
+<div class="contact_us">
+    <div class="contact_us_">
+        <img src="../IMAGES/c.jpg" alt="">
+        <div class="texte__us">
+            <h1> CONTACTEZ-NOUS </h1>
+            <p> VOUS ETES PARTICULIERS OU RESIDENTS A L'ETRANGER </p>
+            <h2> DIRECT CALL </h2>
+        
+            <div class="Contactez__nous__">
+
+                <div class="Contactez__nous__col">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h4> PARTICULIERS </h4>
+                    <ul>
+                        <i class="fa-solid fa-phone"></i>
+                        <li> +213 21 98 11 30</li>
+                    </ul>
+                </div>
+
+                    <!-- Deuxieme colone   -->
+                <div class="Contactez__nous__col">
+                    <i class="fa-solid fa-earth-europe"></i>
+                    <h4> RESIDENTS A L'ETRANGER </h4>
+                    <ul>
+                        <i class="fa-solid fa-phone"></i>
+                        <li>3319</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- ------------------------------ FIN de Contact us   --------------------------- -->
+
+<!-- ------------------------------  DEBUT d' AIDE  --------------------------- -->
+
+<!-- <div class="AIDE">
+
+
+</div> -->
+
+
+<!-- ------------------------------  FIN d'  AIDE  --------------------------- -->
+
+
+<!-- ------------------------------  DEBUT DU FOOTER --------------------------- -->
+    <footer>
+
+        <div class="footer__">
+            
+            <div class="contenu__foot">
+            
+                <div class="row__">   
+                  <!--       dans la premier ligne il y a une image et 3 colones  -->
+                 <div class="image-footer">
+                        <a type="image/png"> <img src="../IMAGES/med.png" alt="Logo">  </a>
+                    </div>
+
+                     <!--  Premiere colone  -->
+                   <div class="footer__col">
+                        <h4>BNP Paribas Banque</h4>
+                        <ul>
+                            <li><a href="#">Notre idée de la banque</a></li>
+                            <li><a href="#">Histoire</a></li>
+                            <li><a href="#">Presse</a></li>
+                            <li><a href="#">Nous rejoindre</a></li>
+                            <li><a href="bnp.html">Emploi & carrière</a></li>
+                            <li><a href="#">A propos</a></li>
+                        </ul>
+                    </div>
+
+                     <!--   Deuxieme colone   -->
+                  <div class="footer__col">
+                        <h4> Documentation </h4>
+                        <ul>
+                            <li><a href="#">Sécurité</a></li>
+                            <li><a href="#"></i> Réglementation</a></li>
+                            <li><a href="#">Informations bancaires</a></li>
+                            <li><a href="#">Informations financieres</a></li>
+                            <li><a href="#">Tarifs et conditions</a></li>
+                        </ul>
+                    </div>
+            
+                    <!--Troisieme colone   -->
+                      <div class="footer__col">
+                        <h4> Restez informés</h4>
+                         <div class="social__links">
+                            <a href="#"> <i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                            <a href="#"> <i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                            <a href="#"> <i class="fa-brands fa-linkedin-in"baria-hidden="true"></i></a>
+                        </div>
+                        <h4> Télecharger l'application </h4>
+                        <div class="social__links">
+                            <a href="#"> <i class="fa-brands fa-apple"></i></a>
+                            <a href="#"> <i class="fa-solid fa-play"></i></a>
+                        </div>
+                    </div> 
+
+                </div>
+
+                <!-- Dans la deuxieme ligne   -->
+                <div class="row__">
+                    <div class="row__a">
+                        <ul>
+                        <li><a href="#">Aide</a></li>           
+                        </ul>
+                    </div>
+                    <div class="row__a">
+                        <ul>
+                        <li><a href="#">Mentions légales</a></li>
+                        </ul>
+                    </div>    
+                    <div class="row__a">
+                        <ul>
+                        <li><a href="#">Cookies</a></li>
+                        </ul>
+                    </div>
+                    <div class="row__a">
+                        <ul>
+                        <li><a href="#">Plan du site</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>     
+
+
+    
+</body>
+</html>
