@@ -42,3 +42,11 @@ function erase() {
 document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
   if(textArray.length) setTimeout(type, newTextDelay + 250);
 });
+
+ 
+document
+.querySelector(".hamburger__container")
+.addEventListener("click",(e)=> {
+    document.querySelector(".hamburger__content").classList.toggle("active")
+    document.querySelector(".hamburger__container").classList.toggle("active")
+})
