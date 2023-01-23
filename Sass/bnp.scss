@@ -3,15 +3,15 @@
     box-sizing: border-box;
 
 }
-    .OFFRES{
+.OFFRES{
         text-align: center;
     }
 .a{
     margin:50px  50px;
     padding:50px;
     border-radius: 25px;
-    background-color: rgba(128, 128, 128, 20%);
-    /* opacity: 20%; */
+    background-color: rgba(128, 128, 128, 0.302);
+    // opacity: 5%; 
     text-align: center;
 color: rgb(10, 10, 10);
 }
@@ -54,7 +54,7 @@ body{position: relative;}
     /* position: absolute;
     bottom: 0%; */
 }
-
+// SASS////
 
 ul{
     list-style: none;
@@ -62,20 +62,29 @@ ul{
 .footer-col{
     width: 25%;
     margin: 10px ;
+   .h4{
+        font-size: 18px;
+        color: blanchedalmond ;
+        margin-bottom: 20px;
+        font-weight: 500;
+        text-decoration: underline #04AA6D ;
+    }
 }
+
+
 
 .image-footer{
     width: 25%;
     padding: 60px ;  
 }
 
-.footer-col h4{
-    font-size: 18px;
-    color: blanchedalmond ;
-    margin-bottom: 20px;
-    font-weight: 500;
-    text-decoration: underline #04AA6D ;
-}
+// .footer-col h4{
+//     font-size: 18px;
+//     color: blanchedalmond ;
+//     margin-bottom: 20px;
+//     font-weight: 500;
+//     text-decoration: underline #04AA6D ;
+// }
 
 .footer-col ul li:not(:last-child){
     margin-bottom: 10px ;
@@ -87,12 +96,16 @@ ul{
     color: rgb(255, 255, 255);
     display: block;
     transition: all 0.3s ease;
+    &:hover{
+        color: #fffffff5;
+        padding-left: 20px;
+    }
 }
 
-.footer-col ul li a:hover{
-    color: #fffffff5;
-    padding-left: 20px;
-}
+// .footer-col ul li a:hover{
+//     color: #fffffff5;
+//     padding-left: 20px;
+// }
 
 .footer-col .social-links a{
     display: inline-block;
@@ -105,12 +118,16 @@ ul{
     border-radius: 50%;
     color: rgb(255, 255, 255);
     transition: all 0.5s ease;
+    &:hover{
+        color: rgb(0, 0, 0);
+        background-color: #f9fafa;
+    }
 }
 
-.footer-col .social-links a:hover{
-    color: rgb(0, 0, 0);
-    background-color: #f9fafa;
-}
+// .footer-col .social-links a:hover{
+//     color: rgb(0, 0, 0);
+//     background-color: #f9fafa;
+// }
 
 @media (max-width: 500px) {
     .footer-col{
@@ -130,13 +147,18 @@ ul{
     padding: 0 2px;
     display: flex;
     justify-content: space-evenly;  
+    ul li a{
+        font-size: 11px;
+        color: rgb(255, 255, 255);
+        display: block;
+    }
 }
 
-.row-a ul li a{
-    font-size: 11px;
-    color: rgb(255, 255, 255);
-    display: block;
-}
+// .row-a ul li a{
+//     font-size: 11px;
+//     color: rgb(255, 255, 255);
+//     display: block;
+// }
 
 .row .row-a a:hover{
     color: rgb(0, 0, 0);
@@ -156,18 +178,26 @@ ul{
     left: 6%;
     top: 10%;
     /* / **text-shadow: #04AA6D;  */
+    a {
+        float: right;
+        text-align: center;
+        padding: 12px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-size: 13px;
+        }
 }
 
 
 /* / Les liens de la Navbar / */
-.navbar a {
-  float: right;
-  text-align: center;
-  padding: 12px;
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  font-size: 13px;
-  }
+// .navbar a {
+//   float: right;
+//   text-align: center;
+//   padding: 12px;
+//   color: rgb(0, 0, 0);
+//   text-decoration: none;
+//   font-size: 13px;
+//   }
 
 /* / Hover des liens / */
 .navbar a:hover {
@@ -182,10 +212,9 @@ ul{
 }
 
 /* / Responsive dans moins de 500px/ */
-@media screen and (max-width: 500px) {
-  .navbar a {
-    float: none;
-    display: block;
+@media screen and (max-width: 1200px) {
+  .navbar {
+    display: none;
   }
 }
 
@@ -210,20 +239,20 @@ ul{
 }
 
 
-@media screen and (max-width: 500px) {
-  .navbar a, .navbar input[type=text] {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
+// @media screen and (max-width: 500px) {
+//   .navbar a, .navbar input[type=text] {
+//     float: none;
+//     display: block;
+//     text-align: left;
+//     width: 100%;
+//     margin: 0;
+//     padding: 14px;
+//   }
 
-  .navbar input[type=text] {
-    border: 1px solid #ccc;
-  }
-}
+//   .navbar input[type=text] {
+//     border: 1px solid #ccc;
+//   }
+// }
 
 .RECH input{
     margin: 20px;
@@ -390,3 +419,122 @@ width: 400px;
     left: 0; 
 }
 }
+/////////// ///////////////////// CSS
+/*------------------------------------------- DEBUT HUMBERGER -----------------------------------*/
+.hamburger{
+    display: none ;
+  
+      .hamburger__container{
+        display: block ;
+        position: fixed  ; 
+        z-index: 999; 
+        top: 4em ; 
+        left: 0.5em ; 
+        cursor: pointer;
+        width: 4rem; 
+        height: 2rem; 
+        transition: opacity 150ms ease-in;
+        &:hover {
+          opacity: 0.9;
+        }
+        .hamone,
+        .hamtwo,
+        .hamthree{
+          content :""; 
+          position: absolute; 
+          left: 0 ; 
+          display: block; 
+          width: 100%; 
+          height: 12%; 
+          background: #000000;
+          border-radius: 100vw;
+        }
+        .hamone{
+          transition: all 200ms ease-in;
+          top: 0;
+        }
+        .hamtwo{
+          transition: all 300ms ease-in ; 
+          top: 50%; 
+          transform: translateY(-50%);
+          width: 75%;
+        }
+        .hamthree{
+          width: 30%;
+          transform-origin: right;
+          bottom: 0;
+        }
+        &.active {
+          .hamone,
+          .hamtwo,
+          .hamthree{
+            background: rgb(255, 255, 255);
+          }
+          .hamtwo {
+            width: 100% ;
+          }
+          .hamone{
+            width: 30%;
+            transform-origin: right; 
+            transform: translateX(-25%) rotate(-48deg) ;
+          }
+          .hamthree {
+            
+            width: 30%;
+            transform-origin: right; 
+            transform: translateX(-25%) rotate(48deg) ;
+          }
+        }
+      }
+    
+      .hamburger__content{
+        transform: translateX(-110%);
+        position: fixed;
+        z-index: 99;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 40vh;
+        background-color: #04aa6dc9;
+        transition: tranform 500ms ease-in;
+        ul {      
+          padding-block: 1rem;
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          align-items: center;
+          justify-content: space-between;
+          
+          } 
+           li a{
+            color: #ffffff;
+            &.active_{
+              border-radius: 3px;
+              background-color: #000000d0;
+            }
+          }
+            &.active {
+              transform: translateX(0);
+            }
+      } 
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .hamburger{
+      display: block ;
+    }
+  }
+  
+  /*------------------------------------------- FIN HUMBERGER -----------------------------------*/
+  
+  .a {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1s ease;
+    }
+    
+    .a.activee {
+    transform: translateY(0px);
+    opacity: 1;
+    }
